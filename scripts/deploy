@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh app@kirkwall <<EOF
+  cd ~/sqm-nodeapp
+  git pull
+  npm install --production
+  forever restartall
+  exit
+EOF
